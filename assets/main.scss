@@ -1,0 +1,112 @@
+---
+---
+/* MAIN */
+@font-face {
+  font-family: Theano;
+  src: url(TheanoDidot-Regular.ttf);
+}
+
+/* VARIABLES */
+$accent-color: crimson;
+
+/* MAIN */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Theano;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+/* LAYOUT */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+  align-items: center;
+  height: 15vh;
+  justify-content: space-between;
+  border-bottom: 2px solid
+}
+#name-and-title {
+  justify-content: center;
+}
+.name {
+  font-size: 36px;
+}
+.title {
+  font-size: 20px;
+}
+.content {
+
+}
+.item {
+  position: relative;
+  float: left;
+  background-color: $accent-color;
+  margin: 10px;
+  height: 300px;
+  cursor: pointer;
+}
+
+/* FLEX BOX */
+.column,
+.horizontal-list {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.horizontal-list {
+  flex-direction: row;
+}
+.horizontal-list > *:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* PHOTOS */
+.round-photo {
+  height: 90px;
+  width: 90px;
+  background: url('../images/portrait.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 50px;
+}
+
+/* ITEMS */
+#one {
+  width: 30%;
+  height: 620px;
+  padding: 20px;
+  font-size: 24px;
+  border: 1px solid black;
+  background: transparent;
+}
+#two {
+  width: 65%;
+  background: url('../images/hooked1.png');
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#three {
+  width: 43%;
+}
+#four {
+  width: 20%;
+}
+#five {
+  width: 650px;
+}
+#six {
+  width: 650px;
+}
