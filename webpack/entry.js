@@ -4,35 +4,45 @@ import {
   BrowserRouter as Router,
   Route,
   Link
-} from 'react-router-dom'
+} from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
+
+import Resume from './modules/resume/resume';
+
+const history = createBrowserHistory()
 
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router history={history}>
         <div className="container">
-          <div className="header">
-              <div className="horizontal-list">
-                <div id="avatar" className="round-photo"></div>
-                <div id="name-and-title" className="column">
-                  <div className="name">
-                    TREY GRANDERSON
-                  </div>
-                  <div className="title">
-                    Front End Developer
-                  </div>
+          <div className="header row-wrap">
+
+            <div className="header-intro horizontal-list">
+              <div id="avatar" className="round-photo"></div>
+              <div id="name-and-title" className="column">
+                <div className="name">
+                  TREY GRANDERSON
+                </div>
+                <div className="title">
+                  Front End Developer
                 </div>
               </div>
+            </div>
 
-              <div id="nav-links" className="horizontal-list">
-                  <Link className="nav-link" to="/">RECENT WORK</Link>
-                  <Link className="nav-link" to="/about">ABOUT</Link>
-                  <Link className="nav-link" to="/resume">RESUME</Link>
-                  <Link className="nav-link" to="/contact">CONTACT</Link>
-              </div>
+            <div id="nav-links" className="horizontal-list">
+              <Link className="nav-link" to="/">RECENT WORK</Link>
+              <Link className="nav-link" to="/about">ABOUT</Link>
+              <Link className="nav-link" to="/resume">RESUME</Link>
+              <Link className="nav-link" to="/contact">CONTACT</Link>
+              <a className="nav-link" href="https://github.com/tgrander">
+                MY CODE
+              </a>
+            </div>
+
           </div>
 
-          <Route exact path="/" component={Content}/>
+          <Route exact path="/" component={Content} />
           <Route path="/about" component={About} />
           <Route path="/resume" component={Resume} />
           <Route path="/contact" component={Contact} />
@@ -44,12 +54,14 @@ class App extends Component {
 
 const Content = () => (
   <div className="content">
-      <div className="item" id="one">
-        Trey is a digital creator with a passion for the web and the front end.
+      <div className="item centered" id="one">
+        <div>
+          Trey is a digital creator with a passion for the web and the front end.
 
-        He uses Javascript and cutting-edge technologies to craft beautiful, performant and user-centric experiences in the browser.
+          He uses Javascript and cutting-edge technologies to craft beautiful, performant and user-centric experiences in the browser.
 
-        He envied the artist's ability to create, and so he became an engineer.
+          He envied the artist's ability to create, and so he became an engineer.
+        </div>
       </div>
       <div className="item" id="two">
 
@@ -58,9 +70,6 @@ const Content = () => (
 
       </div>
       <div className="item" id="four">
-
-      </div>
-      <div className="item" id="five">
 
       </div>
   </div>
@@ -72,15 +81,9 @@ const About = () => (
   </div>
 )
 
-const Resume = () => (
-  <div>
-    <h2>Resume</h2>
-  </div>
-)
-
 const Contact = () => (
   <div>
-    <h2>Resume</h2>
+    <h2>Contact</h2>
   </div>
 )
 

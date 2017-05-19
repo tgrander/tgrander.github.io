@@ -6,8 +6,13 @@
   src: url(TheanoDidot-Regular.ttf);
 }
 
+@import '../_sass/resume.scss';
+@import '../_sass/about.scss';
+
 /* VARIABLES */
 $accent-color: crimson;
+$breakpoint: 1000px;
+$header-breakpoint: 1300px;
 
 /* MAIN */
 * {
@@ -31,11 +36,14 @@ a {
   margin: 0 auto;
 }
 .header {
-  display: flex;
   align-items: center;
-  height: 15vh;
+  height: auto;
   justify-content: space-between;
-  border-bottom: 2px solid
+  border-bottom: 1px solid;
+  padding: 10px 0 10px 0;
+}
+.header-intro {
+  margin-bottom: 0;
 }
 #name-and-title {
   justify-content: center;
@@ -49,18 +57,16 @@ a {
 .content {
 
 }
-.item {
-  position: relative;
-  float: left;
-  background-color: $accent-color;
-  margin: 10px;
-  height: 300px;
-  cursor: pointer;
+.nav-link {
+  font-size: 14px;
 }
 
 /* FLEX BOX */
 .column,
-.horizontal-list {
+.horizontal-list,
+.row-nowrap,
+.centered,
+.row-wrap {
   display: flex;
 }
 .column {
@@ -71,6 +77,16 @@ a {
 }
 .horizontal-list > *:not(:last-child) {
   margin-right: 30px;
+}
+.row-wrap {
+  flex-flow: row wrap;
+}
+.row-nowrap {
+  flex-flow: row nowrap;
+}
+.centered {
+  justify-content: center;
+  align-items: center;
 }
 
 /* PHOTOS */
@@ -84,13 +100,25 @@ a {
 }
 
 /* ITEMS */
+.item {
+  position: relative;
+  float: left;
+  background-color: $accent-color;
+  margin: 10px;
+  height: 300px;
+  cursor: pointer;
+}
 #one {
   width: 30%;
   height: 620px;
   padding: 20px;
   font-size: 24px;
   border: 1px solid black;
-  background: transparent;
+  background: black;
+  color: white;
+}
+#one div {
+  line-height: 170%;
 }
 #two {
   width: 65%;
@@ -100,13 +128,41 @@ a {
 }
 #three {
   width: 43%;
+  background: url('../images/3.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
 }
 #four {
   width: 20%;
+  background: url('../images/2.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
 }
 #five {
   width: 650px;
 }
 #six {
   width: 650px;
+}
+
+@media only screen and (max-width: $header-breakpoint) {
+  .header {
+    justify-content: center;
+  }
+  .header-intro {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: $breakpoint) {
+  .item {
+    margin: 10px 0 10px 0;
+  }
+  #one,
+  #two,
+  #three,
+  #four,
+  #five,
+  #six {
+    width: 100%;
+  }
 }

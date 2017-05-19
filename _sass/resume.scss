@@ -1,0 +1,31 @@
+.resume > * {
+  margin-bottom: 25px;
+}
+.resume > :first-child {
+  margin-top: 25px;
+}
+.section-name {
+  width: 25%;
+}
+.section-content {
+  width: 75%;
+}
+.section-content > *:not(:last-child) {
+  margin-bottom: 15px;
+}
+.section-name,
+.title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.dates {
+  font-weight: bold;
+  color: #676767;
+}
+.synopsis {
+  font-style: italic;
+}
+.resume-link {
+  text-decoration: underline;
+  color: crimson;
+}
