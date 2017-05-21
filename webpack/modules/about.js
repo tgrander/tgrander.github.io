@@ -2,14 +2,13 @@ import React from 'react';
 
 function About() {
   return (
-    <div>
-      <div>
+    <div className="about-container">
+      <div className="self-portrait">
 
       </div>
-      <div>
-
+      <div className="about">
+        HELLO WORLD
       </div>
-
     </div>
   )
 }

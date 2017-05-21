@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory';
 
+import Main from './modules/main';
 import Resume from './modules/resume/resume';
-
-const history = createBrowserHistory()
+import About from './modules/about';
 
 class App extends Component {
   render() {
     return (
-      <Router history={history}>
+      <Router history={createBrowserHistory()}>
         <div className="container">
           <div className="header row-wrap">
 
@@ -35,14 +35,15 @@ class App extends Component {
               <Link className="nav-link" to="/about">ABOUT</Link>
               <Link className="nav-link" to="/resume">RESUME</Link>
               <Link className="nav-link" to="/contact">CONTACT</Link>
-              <a className="nav-link" href="https://github.com/tgrander">
+              <a className="nav-link" target="_blank"
+                href="https://github.com/tgrander">
                 MY CODE
               </a>
             </div>
 
           </div>
 
-          <Route exact path="/" component={Content} />
+          <Route exact path="/" component={Main} />
           <Route path="/about" component={About} />
           <Route path="/resume" component={Resume} />
           <Route path="/contact" component={Contact} />
@@ -51,35 +52,6 @@ class App extends Component {
     )
   }
 }
-
-const Content = () => (
-  <div className="content">
-      <div className="item centered" id="one">
-        <div>
-          Trey is a digital creator with a passion for the web and the front end.
-
-          He uses Javascript and cutting-edge technologies to craft beautiful, performant and user-centric experiences in the browser.
-
-          He envied the artist's ability to create, and so he became an engineer.
-        </div>
-      </div>
-      <div className="item" id="two">
-
-      </div>
-      <div className="item" id="three">
-
-      </div>
-      <div className="item" id="four">
-
-      </div>
-  </div>
-)
-
-const About = () => (
-  <div>
-    <h2>About</h2>
-  </div>
-)
 
 const Contact = () => (
   <div>

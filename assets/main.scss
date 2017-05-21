@@ -33,6 +33,7 @@ a {
 /* LAYOUT */
 .container {
   width: 80%;
+  max-width: 1000px;
   margin: 0 auto;
 }
 .header {
@@ -41,6 +42,7 @@ a {
   justify-content: space-between;
   border-bottom: 1px solid;
   padding: 10px 0 10px 0;
+  margin-bottom: 10px;
 }
 .header-intro {
   margin-bottom: 0;
@@ -66,7 +68,8 @@ a {
 .horizontal-list,
 .row-nowrap,
 .centered,
-.row-wrap {
+.row-wrap,
+.space-around {
   display: flex;
 }
 .column {
@@ -87,6 +90,9 @@ a {
 .centered {
   justify-content: center;
   align-items: center;
+}
+.space-around {
+  justify-content: space-between;
 }
 
 /* PHOTOS */
@@ -145,6 +151,7 @@ a {
   width: 650px;
 }
 
+// MEDIA QUERY FOR THE HEADER
 @media only screen and (max-width: $header-breakpoint) {
   .header {
     justify-content: center;
@@ -153,7 +160,11 @@ a {
     margin-bottom: 30px;
   }
 }
+// MEDIA QUERY FOR MAIN CONTENT
 @media only screen and (max-width: $breakpoint) {
+  .container {
+    width: 90%;
+  }
   .item {
     margin: 10px 0 10px 0;
   }

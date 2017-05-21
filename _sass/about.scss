@@ -1,0 +1,38 @@
+$self-portrait-width: 50%;
+$breakpoint: 800px;
+
+.about-container {
+  display: flex;
+  flex-flow: row wrap;
+  height: auto;
+}
+.self-portrait,
+.about {
+  width: 100%;
+}
+.self-portrait {
+  height: 40vh;
+  background: url('../images/about.jpg');
+  background-size: cover;
+}
+.about {
+  height: auto;
+}
+
+@media only screen and (min-width: 800px) {
+  .about-container {
+    height: 80vh;
+    flex-flow: row nowrap;
+  }
+  .self-portrait,
+  .about {
+    height: 100%;
+    padding: 0 25px 0 25px;
+  }
+  .self-portrait {
+    width: $self-portrait-width;
+  }
+  .about {
+    width: 100% - $self-portrait-width;
+  }
+}
