@@ -12,7 +12,7 @@
 /* VARIABLES */
 $accent-color: crimson;
 $breakpoint: 1000px;
-$header-breakpoint: 1300px;
+$header-breakpoint: 1000px;
 
 /* MAIN */
 * {
@@ -51,16 +51,16 @@ a {
   justify-content: center;
 }
 .name {
-  font-size: 36px;
+  font-size: 24px;
 }
 .title {
-  font-size: 20px;
+  font-size: 14px;
 }
 .content {
 
 }
 .nav-link {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /* FLEX BOX */
@@ -158,6 +158,11 @@ a {
   }
   .header-intro {
     margin-bottom: 30px;
+  }
+  .header-intro,
+  #nav-links {
+    width: 100%;
+    justify-content: center;
   }
 }
 // MEDIA QUERY FOR MAIN CONTENT
