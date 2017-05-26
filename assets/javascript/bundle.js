@@ -11407,7 +11407,7 @@ function Main() {
         { className: 'item centered', id: 'one' },
         _react2.default.createElement(
           'div',
-          { className: 'fade-in-text' },
+          { className: 'text' },
           'Kynplex'
         )
       ),
@@ -11416,7 +11416,7 @@ function Main() {
         { className: 'item centered', id: 'two' },
         _react2.default.createElement(
           'div',
-          { className: 'fade-in-text' },
+          { className: 'text' },
           'HOOKED'
         )
       ),
@@ -11425,7 +11425,7 @@ function Main() {
         { className: 'item centered', id: 'three' },
         _react2.default.createElement(
           'div',
-          { className: 'fade-in-text' },
+          { className: 'text' },
           'Zenmo'
         )
       )

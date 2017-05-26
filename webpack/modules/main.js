@@ -12,17 +12,17 @@ function Main() {
 
       <section className="highlighted-work">
         <div className="item centered" id="one">
-          <div className="fade-in-text">
+          <div className="text">
             Kynplex
           </div>
         </div>
         <div className="item centered" id="two">
-          <div className="fade-in-text">
+          <div className="text">
             HOOKED
           </div>
         </div>
         <div className="item centered" id="three">
-          <div className="fade-in-text">
+          <div className="text">
             Zenmo
           </div>
         </div>

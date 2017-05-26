@@ -15,6 +15,38 @@
   justify-content: space-between;
   width: 100%;
 }
+/* ITEMS */
+.item {
+  position: relative;
+  height: 300px;
+  cursor: pointer;
+  width: 32%;
+  backface-visibility: hidden;
+}
+.text {
+  color: white;
+  font-size: 36px;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.item:hover .text {
+  opacity: 1;
+}
+#one {
+  background: url('../images/2.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#two {
+  background: url('../images/hooked1.png');
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#three {
+  background: url('../images/3.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+}
 
 // MEDIA QUERY APPLIED TO MAIN PAGE CONTENT @ BREAKPOINT
 @include mobile-layout-media-query {
