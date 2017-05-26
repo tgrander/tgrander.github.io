@@ -4,24 +4,25 @@ class ProjectItem extends Component {
 
   constructor(props) {
     super(props)
-    this.navigateProgrammatically = path =>
-      this.context.router.transitionTo(path)
+    this.clickHandler = path =>
+      this.props.history.push(
+        `/projects/${this.props.name.toLocaleLowerCase()}`
+      )
   }
 
   render() {
-    const { image, name, history } = this.props;
+    const { image, name, path } = this.props;
     return (
-      <div className="project-item centered"
+      <a className="project-item centered" href={path} target="_blank"
         style={{
           background: `url(../../../images/${image})`,
           backgroundSize: 'cover',
           backgroundPosition: '50%'
-        }}
-        onClick={e => history.push(`/projects/${name.toLocaleLowerCase()}`)}>
+        }}>
         <div className="text">
           {name}
         </div>
-      </div>
+      </a>
     )
   }
 }

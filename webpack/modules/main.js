@@ -15,14 +15,17 @@ function Main({ history }) {
         <ProjectItem
           image='2.jpg'
           name="Kynplex"
+          path="https://kynplex.com/"
           history={history} />
         <ProjectItem
           image="hooked1.png"
           name="HOOKED"
+          path="https://hookedproject.herokuapp.com/"
           history={history} />
         <ProjectItem
           image="3.jpg"
           name="Zenmo"
+          path="https://github.com/tgrander/zenmo-api"
           history={history} />
       </section>
 

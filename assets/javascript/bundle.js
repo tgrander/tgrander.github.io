@@ -11411,14 +11411,17 @@ function Main(_ref) {
       _react2.default.createElement(_project_item2.default, {
         image: '2.jpg',
         name: 'Kynplex',
+        path: 'https://kynplex.com/',
         history: history }),
       _react2.default.createElement(_project_item2.default, {
         image: 'hooked1.png',
         name: 'HOOKED',
+        path: 'https://hookedproject.herokuapp.com/',
         history: history }),
       _react2.default.createElement(_project_item2.default, {
         image: '3.jpg',
         name: 'Zenmo',
+        path: 'https://github.com/tgrander/zenmo-api',
         history: history })
     ),
     _react2.default.createElement(
@@ -12009,34 +12012,31 @@ var ProjectItem = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (ProjectItem.__proto__ || Object.getPrototypeOf(ProjectItem)).call(this, props));
 
-    _this.navigateProgrammatically = function (path) {
-      return _this.context.router.transitionTo(path);
+    _this.clickHandler = function (path) {
+      return _this.props.history.push("/projects/" + _this.props.name.toLocaleLowerCase());
     };
     return _this;
   }
 
   _createClass(ProjectItem, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       var _props = this.props,
           image = _props.image,
           name = _props.name,
-          history = _props.history;
+          path = _props.path;
 
       return _react2.default.createElement(
-        'div',
-        { className: 'project-item centered',
+        "a",
+        { className: "project-item centered", href: path, target: "_blank",
           style: {
-            background: 'url(../../../images/' + image + ')',
+            background: "url(../../../images/" + image + ")",
             backgroundSize: 'cover',
             backgroundPosition: '50%'
-          },
-          onClick: function onClick(e) {
-            return history.push('/projects/' + name.toLocaleLowerCase());
           } },
         _react2.default.createElement(
-          'div',
-          { className: 'text' },
+          "div",
+          { className: "text" },
           name
         )
       );
