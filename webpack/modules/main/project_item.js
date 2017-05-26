@@ -17,7 +17,7 @@ class ProjectItem extends Component {
           backgroundSize: 'cover',
           backgroundPosition: '50%'
         }}
-        onClick={e => history.push(name.toLocaleLowerCase())}>
+        onClick={e => history.push(`/projects/${name.toLocaleLowerCase()}`)}>
         <div className="text">
           {name}
         </div>

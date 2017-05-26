@@ -4,7 +4,7 @@ import createBrowserHistory from 'history/createBrowserHistory';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  NavLink
 } from 'react-router-dom';
 
 import Main from './modules/main';
@@ -30,10 +30,10 @@ class App extends Component {
               </div>
             </div>
             <div id="nav-links" className="horizontal-list">
-              <Link className="nav-link" to="/">RECENT WORK</Link>
-              <Link className="nav-link" to="/about">ABOUT</Link>
-              <Link className="nav-link" to="/resume">RESUME</Link>
-              <Link className="nav-link" to="/contact">CONTACT</Link>
+              <NavLink className="nav-link" activeClassName="active" exact to="/">HOME</NavLink>
+              <NavLink className="nav-link" activeClassName="active" to="/about">ABOUT</NavLink>
+              <NavLink className="nav-link" activeClassName="active" to="/resume">RESUME</NavLink>
+              <NavLink className="nav-link" activeClassName="active" to="/contact">CONTACT</NavLink>
               <a className="nav-link" target="_blank"
                 href="https://github.com/tgrander">
                 MY CODE

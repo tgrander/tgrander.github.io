@@ -11920,23 +11920,23 @@ var App = function (_Component) {
               'div',
               { id: 'nav-links', className: 'horizontal-list' },
               _react2.default.createElement(
-                _reactRouterDom.Link,
-                { className: 'nav-link', to: '/' },
-                'RECENT WORK'
+                _reactRouterDom.NavLink,
+                { className: 'nav-link', activeClassName: 'active', exact: true, to: '/' },
+                'HOME'
               ),
               _react2.default.createElement(
-                _reactRouterDom.Link,
-                { className: 'nav-link', to: '/about' },
+                _reactRouterDom.NavLink,
+                { className: 'nav-link', activeClassName: 'active', to: '/about' },
                 'ABOUT'
               ),
               _react2.default.createElement(
-                _reactRouterDom.Link,
-                { className: 'nav-link', to: '/resume' },
+                _reactRouterDom.NavLink,
+                { className: 'nav-link', activeClassName: 'active', to: '/resume' },
                 'RESUME'
               ),
               _react2.default.createElement(
-                _reactRouterDom.Link,
-                { className: 'nav-link', to: '/contact' },
+                _reactRouterDom.NavLink,
+                { className: 'nav-link', activeClassName: 'active', to: '/contact' },
                 'CONTACT'
               ),
               _react2.default.createElement(
@@ -12032,7 +12032,7 @@ var ProjectItem = function (_Component) {
             backgroundPosition: '50%'
           },
           onClick: function onClick(e) {
-            return history.push(name.toLocaleLowerCase());
+            return history.push('/projects/' + name.toLocaleLowerCase());
           } },
         _react2.default.createElement(
           'div',
