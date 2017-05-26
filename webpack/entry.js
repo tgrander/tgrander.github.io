@@ -10,6 +10,7 @@ import {
 import Main from './modules/main';
 import Resume from './modules/resume/resume';
 import About from './modules/about';
+import ProjectPage from './modules/project_page';
 
 class App extends Component {
   render() {
@@ -47,6 +48,7 @@ class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/resume" component={Resume} />
           <Route path="/contact" component={Contact} />
+          <Route path="/projects/:project" component={ProjectPage} />
         </div>
       </Router>
     )

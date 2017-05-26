@@ -1,6 +1,7 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
+
+import ProjectItem from './main/project_item';
 
 function Main() {
   return (
@@ -11,21 +12,15 @@ function Main() {
       </div>
 
       <section className="highlighted-work">
-        <div className="item centered" id="one">
-          <div className="text">
-            Kynplex
-          </div>
-        </div>
-        <div className="item centered" id="two">
-          <div className="text">
-            HOOKED
-          </div>
-        </div>
-        <div className="item centered" id="three">
-          <div className="text">
-            Zenmo
-          </div>
-        </div>
+        <ProjectItem
+          image='2.jpg'
+          name="Kynplex" />
+        <ProjectItem
+          image="hooked1.png"
+          name="HOOKED" />
+        <ProjectItem
+          image="3.jpg"
+          name="Zenmo" />
       </section>
 
       <a className="pill">See More Work</a>

@@ -15,8 +15,8 @@
   justify-content: space-between;
   width: 100%;
 }
-/* ITEMS */
-.item {
+/* PROJECT ITEMS */
+.project-item {
   position: relative;
   height: 300px;
   cursor: pointer;
@@ -29,23 +29,12 @@
   opacity: 0;
   transition: 0.5s ease;
 }
-.item:hover .text {
+.project-item:hover .text {
   opacity: 1;
 }
-#one {
-  background: url('../images/2.jpg');
-  background-size: cover;
-  background-position: 50% 50%;
-}
-#two {
-  background: url('../images/hooked1.png');
-  background-size: cover;
-  background-position: 50% 50%;
-}
-#three {
-  background: url('../images/3.jpg');
-  background-size: cover;
-  background-position: 50% 50%;
+.project-item a {
+  height: 100%;
+  width: 100%;
 }
 
 // MEDIA QUERY APPLIED TO MAIN PAGE CONTENT @ BREAKPOINT
