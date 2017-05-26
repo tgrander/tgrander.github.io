@@ -8,7 +8,6 @@ import {
 } from 'react-router-dom';
 
 import Main from './modules/main';
-import Main2 from './modules/main2';
 import Resume from './modules/resume/resume';
 import About from './modules/about';
 
@@ -44,7 +43,7 @@ class App extends Component {
 
           </div>
 
-          <Route exact path="/" component={Main2} />
+          <Route exact path="/" component={Main} />
           <Route path="/about" component={About} />
           <Route path="/resume" component={Resume} />
           <Route path="/contact" component={Contact} />

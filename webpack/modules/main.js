@@ -1,20 +1,44 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 function Main() {
   return (
-    <div className="content">
-      <div className="item centered" id="one">
-        <div>
-          Trey is a digital creator with a passion for the web and the front end.
+    <div className="main-page column centered">
 
-          He uses Javascript and cutting-edge technologies to craft beautiful, performant and user-centric experiences in the browser.
-
-          He envied the artists ability to create, and so he became an engineer.
-        </div>
+      <div className="greeting centered" style={{marginBottom: '0'}}>
+        Trey is a Front End Developer with an affinity for collaborating with brilliant minds to build beautiful things.
       </div>
-      <div className="item" id="two"></div>
-      <div className="item" id="three"></div>
-      <div className="item" id="four"></div>
+
+      <section className="highlighted-work">
+        <div className="item centered" id="one">
+          <div className="fade-in-text">
+            Kynplex
+          </div>
+        </div>
+        <div className="item centered" id="two">
+          <div className="fade-in-text">
+            HOOKED
+          </div>
+        </div>
+        <div className="item centered" id="three">
+          <div className="fade-in-text">
+            Zenmo
+          </div>
+        </div>
+      </section>
+
+      <a className="pill">See More Work</a>
+
+      <section className="about-me">
+
+      </section>
+      <section className="experience">
+
+      </section>
+      <section className="contact">
+
+      </section>
     </div>
   )
 }
