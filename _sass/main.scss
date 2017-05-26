@@ -1,5 +1,24 @@
+@import './_mixins.scss';
+
+.main-page {
+  @include margin-bottom-applied-to-each-child(30px);
+}
 .greeting {
-  height: 40vh;
+  height: 30vh;
   font-size: 24px;
   text-align: center;
+  width: 60%;
 }
+.highlighted-work {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+// MEDIA QUERY APPLIED TO MAIN PAGE CONTENT @ BREAKPOINT
+@include mobile-layout-media-query {
+  .highlighted-work {
+    flex-direction: column;
+  }
+};

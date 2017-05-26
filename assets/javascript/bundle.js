@@ -25894,27 +25894,58 @@ var _react = __webpack_require__(7);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(62);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Main2() {
   return _react2.default.createElement(
-    "div",
-    null,
+    'div',
+    { className: 'main-page column centered' },
     _react2.default.createElement(
-      "div",
-      { className: "greeting centered" },
-      "Trey is a Front End Developer with an affinity for collaborating with brilliant minds to build beautiful things."
+      'div',
+      { className: 'greeting centered', style: { marginBottom: '0' } },
+      'Trey is a Front End Developer with an affinity for collaborating with brilliant minds to build beautiful things.'
     ),
     _react2.default.createElement(
-      "section",
-      { className: "highlighted-work" },
-      _react2.default.createElement("div", { className: "item", id: "one" }),
-      _react2.default.createElement("div", { className: "item", id: "two" }),
-      _react2.default.createElement("div", { className: "item", id: "three" })
+      'section',
+      { className: 'highlighted-work' },
+      _react2.default.createElement(
+        'div',
+        { className: 'item centered', id: 'one' },
+        _react2.default.createElement(
+          'div',
+          { className: 'fade-in-text' },
+          'Kynplex'
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'item centered', id: 'two' },
+        _react2.default.createElement(
+          'div',
+          { className: 'fade-in-text' },
+          'HOOKED'
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'item centered', id: 'three' },
+        _react2.default.createElement(
+          'div',
+          { className: 'fade-in-text' },
+          'Zenmo'
+        )
+      )
     ),
-    _react2.default.createElement("section", { className: "about-me" }),
-    _react2.default.createElement("section", { className: "experience" }),
-    _react2.default.createElement("section", { className: "contact" })
+    _react2.default.createElement(
+      'a',
+      { className: 'pill' },
+      'See More Work'
+    ),
+    _react2.default.createElement('section', { className: 'about-me' }),
+    _react2.default.createElement('section', { className: 'experience' }),
+    _react2.default.createElement('section', { className: 'contact' })
   );
 }
 

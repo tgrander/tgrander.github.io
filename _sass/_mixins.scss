@@ -1,0 +1,11 @@
+@import './_variables.scss';
+
+@mixin margin-bottom-applied-to-each-child($margin) {
+  & > *:not(:last-child) {
+    margin-bottom: $margin;
+  }
+}
+
+@mixin mobile-layout-media-query {
+  @media only screen and (max-width: $breakpoint) { @content }
+}

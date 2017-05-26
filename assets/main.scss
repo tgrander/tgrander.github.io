@@ -6,11 +6,8 @@
 @import '../_sass/resume.scss';
 @import '../_sass/about.scss';
 @import '../_sass/main.scss';
-
-/* VARIABLES */
-$accent-color: crimson;
-$breakpoint: 1000px;
-$header-breakpoint: 1000px;
+@import '../_sass/_mixins.scss';
+@import '../_sass/variables.scss';
 
 /* MAIN */
 * {
@@ -22,6 +19,7 @@ body {
 }
 a {
   text-decoration: none;
+  cursor: pointer;
   color: black;
   &:hover {
     color: $accent-color;
@@ -30,7 +28,12 @@ a {
 
 /* STYLE */
 .emphasize {
-  // color: $accent-color;
+  color: $accent-color;
+}
+.pill {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 20px;
 }
 
 /* LAYOUT */
@@ -69,7 +72,7 @@ a {
 .row-nowrap,
 .centered,
 .row-wrap,
-.space-around {
+.space-between {
   display: flex;
 }
 .column {
@@ -91,7 +94,7 @@ a {
   justify-content: center;
   align-items: center;
 }
-.space-around {
+.space-between {
   justify-content: space-between;
 }
 
@@ -108,12 +111,24 @@ a {
 /* ITEMS */
 .item {
   position: relative;
-  float: left;
-  background-color: $accent-color;
-  margin: 5px;
   height: 300px;
   cursor: pointer;
-  width: 30%;
+  width: 32%;
+  opacity: 1;
+  backface-visibility: hidden;
+  transition: .5s ease;
+}
+.fade-in-text {
+  opacity: 0;
+  transition: 0.5s ease;
+  // transform: translate(-50%, -50%);
+  // -ms-transform: translate(-50%, -50%);
+}
+.item:hover {
+  opacity: 0.3;
+}
+.fade-in-text:hover {
+  opacity: 1;
 }
 #one {
   background: url('../images/2.jpg');
@@ -146,19 +161,12 @@ a {
   }
 }
 // MEDIA QUERY FOR MAIN CONTENT
-@media only screen and (max-width: $breakpoint) {
+@include mobile-layout-media-query {
   .container {
     width: 90%;
   }
   .item {
     margin: 10px 0 10px 0;
-  }
-  #one,
-  #two,
-  #three,
-  #four,
-  #five,
-  #six {
     width: 100%;
   }
-}
+};
