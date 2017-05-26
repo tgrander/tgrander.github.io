@@ -11789,6 +11789,10 @@ var _main = __webpack_require__(97);
 
 var _main2 = _interopRequireDefault(_main);
 
+var _main3 = __webpack_require__(225);
+
+var _main4 = _interopRequireDefault(_main3);
+
 var _resume = __webpack_require__(98);
 
 var _resume2 = _interopRequireDefault(_resume);
@@ -11876,7 +11880,7 @@ var App = function (_Component) {
               )
             )
           ),
-          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _main2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _main4.default }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _about2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/resume', component: _resume2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: Contact })
@@ -25874,6 +25878,47 @@ var valueEqual = function valueEqual(a, b) {
 };
 
 exports.default = valueEqual;
+
+/***/ }),
+/* 225 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(7);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Main2() {
+  return _react2.default.createElement(
+    "div",
+    null,
+    _react2.default.createElement(
+      "div",
+      { className: "greeting centered" },
+      "Trey is a Front End Developer with an affinity for collaborating with brilliant minds to build beautiful things."
+    ),
+    _react2.default.createElement(
+      "section",
+      { className: "highlighted-work" },
+      _react2.default.createElement("div", { className: "item", id: "one" }),
+      _react2.default.createElement("div", { className: "item", id: "two" }),
+      _react2.default.createElement("div", { className: "item", id: "three" })
+    ),
+    _react2.default.createElement("section", { className: "about-me" }),
+    _react2.default.createElement("section", { className: "experience" }),
+    _react2.default.createElement("section", { className: "contact" })
+  );
+}
+
+exports.default = Main2;
 
 /***/ })
 /******/ ]);

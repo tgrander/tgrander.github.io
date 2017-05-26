@@ -1,13 +1,11 @@
 ---
 ---
 /* MAIN */
-@font-face {
-  font-family: Theano;
-  src: url(TheanoDidot-Regular.ttf);
-}
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway');
 
 @import '../_sass/resume.scss';
 @import '../_sass/about.scss';
+@import '../_sass/main.scss';
 
 /* VARIABLES */
 $accent-color: crimson;
@@ -19,7 +17,7 @@ $header-breakpoint: 1000px;
   box-sizing: border-box;
 }
 body {
-  font-family: Theano;
+  font-family: 'Raleway', sans-serif;
   margin: 0;
 }
 a {
@@ -28,6 +26,11 @@ a {
   &:hover {
     color: $accent-color;
   }
+}
+
+/* STYLE */
+.emphasize {
+  // color: $accent-color;
 }
 
 /* LAYOUT */
@@ -55,9 +58,6 @@ a {
 }
 .title {
   font-size: 12px;
-}
-.content {
-
 }
 .nav-link {
   font-size: 12px;
@@ -110,45 +110,25 @@ a {
   position: relative;
   float: left;
   background-color: $accent-color;
-  margin: 10px;
+  margin: 5px;
   height: 300px;
   cursor: pointer;
+  width: 30%;
 }
 #one {
-  width: 30%;
-  height: 620px;
-  padding: 20px;
-  font-size: 24px;
-  border: 1px solid black;
-  background: black;
-  color: white;
-}
-#one div {
-  line-height: 170%;
+  background: url('../images/2.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
 }
 #two {
-  width: 65%;
   background: url('../images/hooked1.png');
   background-size: cover;
   background-position: 50% 50%;
 }
 #three {
-  width: 43%;
   background: url('../images/3.jpg');
   background-size: cover;
   background-position: 50% 50%;
-}
-#four {
-  width: 20%;
-  background: url('../images/2.jpg');
-  background-size: cover;
-  background-position: 50% 50%;
-}
-#five {
-  width: 650px;
-}
-#six {
-  width: 650px;
 }
 
 // MEDIA QUERY FOR THE HEADER
