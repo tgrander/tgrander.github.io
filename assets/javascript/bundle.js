@@ -11394,7 +11394,9 @@ var _project_item2 = _interopRequireDefault(_project_item);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Main() {
+function Main(_ref) {
+  var history = _ref.history;
+
   return _react2.default.createElement(
     'div',
     { className: 'main-page column centered' },
@@ -11408,13 +11410,16 @@ function Main() {
       { className: 'highlighted-work' },
       _react2.default.createElement(_project_item2.default, {
         image: '2.jpg',
-        name: 'Kynplex' }),
+        name: 'Kynplex',
+        history: history }),
       _react2.default.createElement(_project_item2.default, {
         image: 'hooked1.png',
-        name: 'HOOKED' }),
+        name: 'HOOKED',
+        history: history }),
       _react2.default.createElement(_project_item2.default, {
         image: '3.jpg',
-        name: 'Zenmo' })
+        name: 'Zenmo',
+        history: history })
     ),
     _react2.default.createElement(
       'a',
@@ -11885,7 +11890,7 @@ var App = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         _reactRouterDom.BrowserRouter,
-        { history: (0, _createBrowserHistory2.default)() },
+        null,
         _react2.default.createElement(
           'div',
           { className: 'container' },
@@ -11942,7 +11947,9 @@ var App = function (_Component) {
               )
             )
           ),
-          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _main2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', render: function render(props) {
+              return _react2.default.createElement(_main2.default, props);
+            } }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _about2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/resume', component: _resume2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: Contact }),
@@ -12011,11 +12018,10 @@ var ProjectItem = function (_Component) {
   _createClass(ProjectItem, [{
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       var _props = this.props,
           image = _props.image,
-          name = _props.name;
+          name = _props.name,
+          history = _props.history;
 
       return _react2.default.createElement(
         'div',
@@ -12026,7 +12032,7 @@ var ProjectItem = function (_Component) {
             backgroundPosition: '50%'
           },
           onClick: function onClick(e) {
-            return _this2.navigateProgrammatically(name.toLocalLowercase());
+            return history.push(name.toLocaleLowerCase());
           } },
         _react2.default.createElement(
           'div',

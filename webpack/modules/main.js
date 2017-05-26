@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import ProjectItem from './main/project_item';
 
-function Main() {
+function Main({ history }) {
   return (
     <div className="main-page column centered">
 
@@ -14,13 +14,16 @@ function Main() {
       <section className="highlighted-work">
         <ProjectItem
           image='2.jpg'
-          name="Kynplex" />
+          name="Kynplex"
+          history={history} />
         <ProjectItem
           image="hooked1.png"
-          name="HOOKED" />
+          name="HOOKED"
+          history={history} />
         <ProjectItem
           image="3.jpg"
-          name="Zenmo" />
+          name="Zenmo"
+          history={history} />
       </section>
 
       <a className="pill">See More Work</a>

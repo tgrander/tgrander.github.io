@@ -9,7 +9,7 @@ class ProjectItem extends Component {
   }
 
   render() {
-    const { image, name } = this.props;
+    const { image, name, history } = this.props;
     return (
       <div className="project-item centered"
         style={{
@@ -17,7 +17,7 @@ class ProjectItem extends Component {
           backgroundSize: 'cover',
           backgroundPosition: '50%'
         }}
-        onClick={e => this.navigateProgrammatically(name.toLocalLowercase())}>
+        onClick={e => history.push(name.toLocaleLowerCase())}>
         <div className="text">
           {name}
         </div>
