@@ -21,6 +21,7 @@ a {
   text-decoration: none;
   cursor: pointer;
   color: black;
+  transition: 0.5s ease;
   &:hover {
     color: $accent-color;
   }
@@ -100,8 +101,8 @@ a {
 
 /* PHOTOS */
 .round-photo {
-  height: 90px;
-  width: 90px;
+  height: 50px;
+  width: 50px;
   background: url('../images/portrait.jpg');
   background-size: cover;
   background-position: 50% 50%;
