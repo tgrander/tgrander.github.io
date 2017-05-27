@@ -11409,7 +11409,7 @@ function Main(_ref) {
       'section',
       { className: 'highlighted-work' },
       _react2.default.createElement(_project_item2.default, {
-        image: '2.jpg',
+        image: 'kynplex.jpg',
         name: 'Kynplex',
         path: 'https://kynplex.com/',
         history: history }),

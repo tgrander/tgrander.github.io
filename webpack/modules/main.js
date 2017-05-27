@@ -13,7 +13,7 @@ function Main({ history }) {
 
       <section className="highlighted-work">
         <ProjectItem
-          image='2.jpg'
+          image='kynplex.jpg'
           name="Kynplex"
           path="https://kynplex.com/"
           history={history} />
