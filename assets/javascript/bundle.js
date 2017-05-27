@@ -11959,22 +11959,22 @@ var App = function (_Component) {
               { className: 'footer-links horizontal-list' },
               _react2.default.createElement(
                 'a',
-                null,
+                { href: 'https://www.linkedin.com/in/tgrander/', target: '_blank' },
                 'LINKED IN'
               ),
               _react2.default.createElement(
                 'a',
-                null,
+                { href: 'https://twitter.com/treygrander?lang=en', target: '_blank' },
                 'TWITTER'
               ),
               _react2.default.createElement(
                 'a',
-                null,
+                { href: 'https://github.com/tgrander', target: '_blank' },
                 'GITHUB'
               ),
               _react2.default.createElement(
                 'a',
-                null,
+                { href: 'https://stackoverflow.com/users/6237741/trey-granderson?tab=profile', target: '_blank' },
                 'STACK OVERFLOW'
               )
             )

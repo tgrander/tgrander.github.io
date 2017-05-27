@@ -50,10 +50,18 @@ class App extends Component {
 
           <footer className="centered">
             <div className="footer-links horizontal-list">
-              <a>LINKED IN</a>
-              <a>TWITTER</a>
-              <a>GITHUB</a>
-              <a>STACK OVERFLOW</a>
+              <a href="https://www.linkedin.com/in/tgrander/" target="_blank">
+                LINKED IN
+              </a>
+              <a href="https://twitter.com/treygrander?lang=en" target="_blank">
+                TWITTER
+              </a>
+              <a href="https://github.com/tgrander" target="_blank">
+                GITHUB
+              </a>
+              <a href="https://stackoverflow.com/users/6237741/trey-granderson?tab=profile" target="_blank">
+                STACK OVERFLOW
+              </a>
             </div>
           </footer>
 
