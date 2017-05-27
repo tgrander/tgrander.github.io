@@ -11927,11 +11927,6 @@ var App = function (_Component) {
                 ),
                 _react2.default.createElement(
                   _reactRouterDom.NavLink,
-                  { className: 'nav-link', activeClassName: 'active', to: '/about' },
-                  'ABOUT'
-                ),
-                _react2.default.createElement(
-                  _reactRouterDom.NavLink,
                   { className: 'nav-link', activeClassName: 'active', to: '/resume' },
                   'RESUME'
                 ),

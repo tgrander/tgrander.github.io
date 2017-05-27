@@ -33,7 +33,9 @@ class App extends Component {
               </div>
               <div id="nav-links" className="horizontal-list">
                 <NavLink className="nav-link" activeClassName="active" exact to="/">HOME</NavLink>
-                <NavLink className="nav-link" activeClassName="active" to="/about">ABOUT</NavLink>
+                {
+                  // <NavLink className="nav-link" activeClassName="active" to="/about">ABOUT</NavLink>
+                }
                 <NavLink className="nav-link" activeClassName="active" to="/resume">RESUME</NavLink>
                 <a className="nav-link" target="_blank"
                   href="https://github.com/tgrander">
