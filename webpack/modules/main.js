@@ -29,8 +29,6 @@ function Main({ history }) {
           history={history} />
       </section>
 
-      <a className="pill">See More Work</a>
-
       <section className="about-me">
 
       </section>

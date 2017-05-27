@@ -11424,11 +11424,6 @@ function Main(_ref) {
         path: 'https://github.com/tgrander/zenmo-api',
         history: history })
     ),
-    _react2.default.createElement(
-      'a',
-      { className: 'pill' },
-      'See More Work'
-    ),
     _react2.default.createElement('section', { className: 'about-me' }),
     _react2.default.createElement('section', { className: 'experience' }),
     _react2.default.createElement('section', { className: 'contact' })
@@ -11896,67 +11891,94 @@ var App = function (_Component) {
         null,
         _react2.default.createElement(
           'div',
-          { className: 'container' },
+          { className: 'app centered column' },
           _react2.default.createElement(
             'div',
-            { className: 'header row-wrap' },
+            { className: 'container' },
             _react2.default.createElement(
-              'div',
-              { className: 'header-intro horizontal-list' },
-              _react2.default.createElement('div', { id: 'avatar', className: 'round-photo' }),
+              'header',
+              { className: 'row-wrap' },
               _react2.default.createElement(
                 'div',
-                { id: 'name-and-title', className: 'column' },
+                { className: 'header-intro horizontal-list' },
+                _react2.default.createElement('div', { id: 'avatar', className: 'round-photo' }),
                 _react2.default.createElement(
                   'div',
-                  { className: 'name' },
-                  'TREY GRANDERSON'
+                  { id: 'name-and-title', className: 'column' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'name' },
+                    'TREY GRANDERSON'
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'title' },
+                    'Front End Developer'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { id: 'nav-links', className: 'horizontal-list' },
+                _react2.default.createElement(
+                  _reactRouterDom.NavLink,
+                  { className: 'nav-link', activeClassName: 'active', exact: true, to: '/' },
+                  'HOME'
                 ),
                 _react2.default.createElement(
-                  'div',
-                  { className: 'title' },
-                  'Front End Developer'
+                  _reactRouterDom.NavLink,
+                  { className: 'nav-link', activeClassName: 'active', to: '/about' },
+                  'ABOUT'
+                ),
+                _react2.default.createElement(
+                  _reactRouterDom.NavLink,
+                  { className: 'nav-link', activeClassName: 'active', to: '/resume' },
+                  'RESUME'
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { className: 'nav-link', target: '_blank',
+                    href: 'https://github.com/tgrander' },
+                  'MY CODE'
                 )
               )
             ),
+            _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', render: function render(props) {
+                return _react2.default.createElement(_main2.default, props);
+              } }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _about2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/resume', component: _resume2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: Contact }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/projects/:project', component: _project_page2.default })
+          ),
+          _react2.default.createElement(
+            'footer',
+            { className: 'centered' },
             _react2.default.createElement(
               'div',
-              { id: 'nav-links', className: 'horizontal-list' },
+              { className: 'footer-links horizontal-list' },
               _react2.default.createElement(
-                _reactRouterDom.NavLink,
-                { className: 'nav-link', activeClassName: 'active', exact: true, to: '/' },
-                'HOME'
-              ),
-              _react2.default.createElement(
-                _reactRouterDom.NavLink,
-                { className: 'nav-link', activeClassName: 'active', to: '/about' },
-                'ABOUT'
-              ),
-              _react2.default.createElement(
-                _reactRouterDom.NavLink,
-                { className: 'nav-link', activeClassName: 'active', to: '/resume' },
-                'RESUME'
-              ),
-              _react2.default.createElement(
-                _reactRouterDom.NavLink,
-                { className: 'nav-link', activeClassName: 'active', to: '/contact' },
-                'CONTACT'
+                'a',
+                null,
+                'LINKED IN'
               ),
               _react2.default.createElement(
                 'a',
-                { className: 'nav-link', target: '_blank',
-                  href: 'https://github.com/tgrander' },
-                'MY CODE'
+                null,
+                'TWITTER'
+              ),
+              _react2.default.createElement(
+                'a',
+                null,
+                'GITHUB'
+              ),
+              _react2.default.createElement(
+                'a',
+                null,
+                'STACK OVERFLOW'
               )
             )
-          ),
-          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', render: function render(props) {
-              return _react2.default.createElement(_main2.default, props);
-            } }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _about2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/resume', component: _resume2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: Contact }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/projects/:project', component: _project_page2.default })
+          )
         )
       );
     }

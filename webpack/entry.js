@@ -16,36 +16,47 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="container">
-          <div className="header row-wrap">
-            <div className="header-intro horizontal-list">
-              <div id="avatar" className="round-photo"></div>
-              <div id="name-and-title" className="column">
-                <div className="name">
-                  TREY GRANDERSON
-                </div>
-                <div className="title">
-                  Front End Developer
+        <div className="app centered column">
+
+          <div className="container">
+            <header className="row-wrap">
+              <div className="header-intro horizontal-list">
+                <div id="avatar" className="round-photo"></div>
+                <div id="name-and-title" className="column">
+                  <div className="name">
+                    TREY GRANDERSON
+                  </div>
+                  <div className="title">
+                    Front End Developer
+                  </div>
                 </div>
               </div>
-            </div>
-            <div id="nav-links" className="horizontal-list">
-              <NavLink className="nav-link" activeClassName="active" exact to="/">HOME</NavLink>
-              <NavLink className="nav-link" activeClassName="active" to="/about">ABOUT</NavLink>
-              <NavLink className="nav-link" activeClassName="active" to="/resume">RESUME</NavLink>
-              <NavLink className="nav-link" activeClassName="active" to="/contact">CONTACT</NavLink>
-              <a className="nav-link" target="_blank"
-                href="https://github.com/tgrander">
-                MY CODE
-              </a>
-            </div>
+              <div id="nav-links" className="horizontal-list">
+                <NavLink className="nav-link" activeClassName="active" exact to="/">HOME</NavLink>
+                <NavLink className="nav-link" activeClassName="active" to="/about">ABOUT</NavLink>
+                <NavLink className="nav-link" activeClassName="active" to="/resume">RESUME</NavLink>
+                <a className="nav-link" target="_blank"
+                  href="https://github.com/tgrander">
+                  MY CODE
+                </a>
+              </div>
+            </header>
+            <Route exact path="/" render={props => <Main {...props} />} />
+            <Route path="/about" component={About} />
+            <Route path="/resume" component={Resume} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/projects/:project" component={ProjectPage} />
           </div>
 
-          <Route exact path="/" render={props => <Main {...props} />} />
-          <Route path="/about" component={About} />
-          <Route path="/resume" component={Resume} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/projects/:project" component={ProjectPage} />
+          <footer className="centered">
+            <div className="footer-links horizontal-list">
+              <a>LINKED IN</a>
+              <a>TWITTER</a>
+              <a>GITHUB</a>
+              <a>STACK OVERFLOW</a>
+            </div>
+          </footer>
+
         </div>
       </Router>
     )
