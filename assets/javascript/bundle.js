@@ -11419,7 +11419,7 @@ function Main(_ref) {
         path: 'https://hookedproject.herokuapp.com/',
         history: history }),
       _react2.default.createElement(_project_item2.default, {
-        image: '3.jpg',
+        image: 'zenmo.jpg',
         name: 'Zenmo',
         path: 'https://github.com/tgrander/zenmo-api',
         history: history })

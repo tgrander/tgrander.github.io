@@ -23,7 +23,7 @@ function Main({ history }) {
           path="https://hookedproject.herokuapp.com/"
           history={history} />
         <ProjectItem
-          image="3.jpg"
+          image="zenmo.jpg"
           name="Zenmo"
           path="https://github.com/tgrander/zenmo-api"
           history={history} />
