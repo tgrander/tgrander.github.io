@@ -8,7 +8,7 @@ function Main({ history }) {
     <div className="main-page column centered">
 
       <div className="greeting centered" style={{marginBottom: '0'}}>
-        Trey is a Front End Developer with an affinity for collaborating with brilliant minds to build beautiful things.
+        Trey is a Front End Engineer with an affinity for collaborating with brilliant minds to build beautiful things.
       </div>
 
       <section className="highlighted-work">
@@ -20,7 +20,7 @@ function Main({ history }) {
         <ProjectItem
           image="hooked1.png"
           name="HOOKED"
-          path="https://hookedproject.herokuapp.com/"
+          path="https://hookedproject.com/"
           history={history} />
         <ProjectItem
           image="zenmo.jpg"

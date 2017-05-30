@@ -11403,7 +11403,7 @@ function Main(_ref) {
     _react2.default.createElement(
       'div',
       { className: 'greeting centered', style: { marginBottom: '0' } },
-      'Trey is a Front End Developer with an affinity for collaborating with brilliant minds to build beautiful things.'
+      'Trey is a Front End Engineer with an affinity for collaborating with brilliant minds to build beautiful things.'
     ),
     _react2.default.createElement(
       'section',
@@ -11416,7 +11416,7 @@ function Main(_ref) {
       _react2.default.createElement(_project_item2.default, {
         image: 'hooked1.png',
         name: 'HOOKED',
-        path: 'https://hookedproject.herokuapp.com/',
+        path: 'https://hookedproject.com/',
         history: history }),
       _react2.default.createElement(_project_item2.default, {
         image: 'zenmo.jpg',
