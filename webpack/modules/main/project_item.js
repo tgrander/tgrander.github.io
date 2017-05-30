@@ -1,30 +1,22 @@
 import React, { Component } from 'react'
 
-class ProjectItem extends Component {
+function ProjectItem({ image, name, path, textColor, history }) {
 
-  constructor(props) {
-    super(props)
-    this.clickHandler = path =>
-      this.props.history.push(
-        `/projects/${this.props.name.toLocaleLowerCase()}`
-      )
-  }
+  const clickHandler = () =>
+    history.push(`/projects/${this.props.name.toLocaleLowerCase()}`)
 
-  render() {
-    const { image, name, path } = this.props;
-    return (
-      <a className="project-item centered" href={path} target="_blank"
-        style={{
-          background: `url(../../../images/${image})`,
-          backgroundSize: 'cover',
-          backgroundPosition: '50%'
-        }}>
-        <div className="text">
-          {name}
-        </div>
-      </a>
-    )
-  }
+  return (
+    <a className="project-item centered" href={path} target="_blank"
+      style={{
+        background: `url(../../../images/${image})`,
+        backgroundSize: 'cover',
+        backgroundPosition: '50%'
+      }}>
+      <div className="text" style={textColor && {color: textColor}}>
+        {name}
+      </div>
+    </a>
+  )
 }
 
 export default ProjectItem

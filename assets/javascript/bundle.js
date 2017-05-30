@@ -12007,61 +12007,41 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function ProjectItem(_ref) {
+  var _this = this;
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+  var image = _ref.image,
+      name = _ref.name,
+      path = _ref.path,
+      textColor = _ref.textColor,
+      history = _ref.history;
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ProjectItem = function (_Component) {
-  _inherits(ProjectItem, _Component);
+  var clickHandler = function clickHandler() {
+    return history.push("/projects/" + _this.props.name.toLocaleLowerCase());
+  };
 
-  function ProjectItem(props) {
-    _classCallCheck(this, ProjectItem);
-
-    var _this = _possibleConstructorReturn(this, (ProjectItem.__proto__ || Object.getPrototypeOf(ProjectItem)).call(this, props));
-
-    _this.clickHandler = function (path) {
-      return _this.props.history.push("/projects/" + _this.props.name.toLocaleLowerCase());
-    };
-    return _this;
-  }
-
-  _createClass(ProjectItem, [{
-    key: "render",
-    value: function render() {
-      var _props = this.props,
-          image = _props.image,
-          name = _props.name,
-          path = _props.path;
-
-      return _react2.default.createElement(
-        "a",
-        { className: "project-item centered", href: path, target: "_blank",
-          style: {
-            background: "url(../../../images/" + image + ")",
-            backgroundSize: 'cover',
-            backgroundPosition: '50%'
-          } },
-        _react2.default.createElement(
-          "div",
-          { className: "text" },
-          name
-        )
-      );
-    }
-  }]);
-
-  return ProjectItem;
-}(_react.Component);
+  return _react2.default.createElement(
+    "a",
+    { className: "project-item centered", href: path, target: "_blank",
+      style: {
+        background: "url(../../../images/" + image + ")",
+        backgroundSize: 'cover',
+        backgroundPosition: '50%'
+      } },
+    _react2.default.createElement(
+      "div",
+      { className: "text", style: textColor && { color: textColor } },
+      name
+    )
+  );
+}
 
 exports.default = ProjectItem;
 
